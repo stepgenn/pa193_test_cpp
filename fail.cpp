@@ -12,11 +12,12 @@ int memcheckFailDemo(int* arrayStack, unsigned int arrayStackLen,
   int* array = new int[5];
   array[100] = 0; 
 
-  if (100 < arrayStackLen) {
+  unsigned int write_at = 100;
+  if (write_at < arrayStackLen) {
   	arrayStack[100] = 0;
   }
 
-  if (100 < arrayHeapLen) {  
+  if (write_at < arrayHeapLen) {  
   	arrayHeap[100] = 0;
   }	
 
