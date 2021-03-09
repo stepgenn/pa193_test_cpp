@@ -35,14 +35,14 @@ void demoBufferOverflowData() {
 	memset(passwd, 2, USER_INPUT_MAX_LENGTH);
 	printf("login as: ");
 	fflush(stdout);
-	//gets(userName); // use scanf("%s", userName); if gets fails with identifier not found
-	scanf("%s", userName);
+	
+	scanf_s("%s", userName);
 
 	// Get password
 	printf("%s@vulnerable.machine.com: ", userName);
 	fflush(stdout);
-	//gets(passwd);  
-	scanf("%s", passwd); // use scanf("%s", passwd); if gets fails with identifier not found
+	
+	scanf_s("%s", passwd); // use scanf("%s", passwd); if gets fails with identifier not found
 
 	// Check user rights (set to NORMAL_USER and not changed in code)
 	if (userRights == NORMAL_USER) {
